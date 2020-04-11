@@ -31,10 +31,10 @@ $chat_id = $message->chat->id;
 $text = $message->text;
 //====================ᵗᶦᵏᵃᵖᵖ======================//
 if(preg_match('/^\/([Ss]tart)/',$text)){
-sendaction($chat_id, typing);
+sendaction($chat_id, "typing");
         bot('sendmessage', [
                 'chat_id' => $chat_id,
-                'text' =>"به ربات تبدیل فایل به لینک خوش امدید",
+                'text' =>"Tezlik:",
             ]);
         }
 ?>
