@@ -1,7 +1,5 @@
 <?php 
 
-ob_start();
-
 $API_KEY = '1067916497:AAEfhYZzSsFn6wGiBuTL3dsJpzU91lXYrI8';
 ##------------------------------##
 define('API_KEY',$API_KEY);
@@ -18,20 +16,7 @@ function bot($method,$datas=[]){
         return json_decode($res);
     }
 }
- function sendmessage($chat_id, $text, $model){
- bot('sendMessage',[
- 'chat_id'=>$chat_id,
- 'text'=>$text,
- 'parse_mode'=>$mode
- ]);
- }
- function senddocument($chat_id,$document,$caption){
-    bot('senddocument',[
-        'chat_id'=>$chat_id,
-        'document'=>$document,
-        'caption'=>$caption
-    ]);
-}
+ 
  function sendaction($chat_id, $action){
  bot('sendchataction',[
  'chat_id'=>$chat_id,
