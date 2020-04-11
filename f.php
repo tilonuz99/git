@@ -26,15 +26,12 @@ function bot($method,$datas=[]){
  //====================ᵗᶦᵏᵃᵖᵖ======================//
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
-
 $from_id = $message->from->id;
 $chat_id = $message->chat->id;
-$message_id = $message->
 $text = $message->text;
 //====================ᵗᶦᵏᵃᵖᵖ======================//
 if(preg_match('/^\/([Ss]tart)/',$text)){
 $start_time = round(microtime(true) * 1000);
-sendaction($chat_id, "typing");
       $send=  bot('sendmessage', [
                 'chat_id' => $chat_id,
                 'text' =>"Tezlik:",
